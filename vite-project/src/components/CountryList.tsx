@@ -26,9 +26,9 @@ const CountryList: React.FC = () => {
     };
 
     return (
-        <div>
-            <h2>찜한 나라</h2>
-            <div>
+        <div className="flex flex-col items-center bg-gray-50 min-h-screen p-4">
+            <h2 className="text-2xl font-bold mb-4">찜한 나라</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
                 {selectedCountries.map((country) => (
                     <CountryCard
                         key={country.name.common}
@@ -37,8 +37,8 @@ const CountryList: React.FC = () => {
                     />
                 ))}
             </div>
-            <h2>전체 나라 목록</h2>
-            <div>
+            <h2 className="text-2xl font-bold mb-4 mt-8">전체 나라 목록</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
                 {countries.map((country) => (
                     <CountryCard
                         key={country.name.common}
